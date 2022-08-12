@@ -1,12 +1,12 @@
 export interface PokemonDataType {
-  id: number;
-  name: string;
-  order: number;
-  types: {
-    slot: number;
-    type: {
-      name: string;
+  id?: number | string;
+  name?: string;
+  order?: number;
+  types?: {
+    slot?: number;
+    type?: {
+      name?: string;
     };
   }[];
-  weight: number;
+  weight?: number;
 }

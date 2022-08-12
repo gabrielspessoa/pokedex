@@ -1,0 +1,54 @@
+.alert-container {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 40px;
+  height: 10%;
+  padding: 0 48px;
+  // transition: top 0.2s ease-in-out;
+
+  &.active {
+    visibility: visible;
+    animation: normal showAlert 1s;
+    z-index: 20;
+    top: 0;
+  }
+}
+
+@keyframes showAlert {
+  0% {
+    filter: brightness(0.5);
+    z-index: 0;
+    top: 40px;
+  }
+  50% {
+    filter: brightness(0.5);
+    z-index: 0;
+    top: -40px;
+  }
+  100% {
+    filter: brightness(1);
+    top: 0;
+  }
+}
+
+.alert-box {
+  height: 100%;
+  flex: 1;
+  max-width: 350px;
+  z-index: 20;
+  box-sizing: border-box;
+  background-color: yellow;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 30%);
+  border-radius: 0 0 2vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  font-size: 18px;
+}

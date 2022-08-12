@@ -6,12 +6,13 @@
     url('/assets/fonts/pokemon.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
   height: 100vh;
   font-family: 'Pokemon', system-ui, sans-serif;
-  background: no-repeat url('/assets/images/landscape.png') center;
+  background: no-repeat url('/assets/images/landscape.webp') center;
   backdrop-filter: blur(6px);
 }
 
@@ -38,6 +39,12 @@ main {
     transform: translateX(-50%);
     z-index: -10;
     position: absolute;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
   }
 }
 
